@@ -97,11 +97,11 @@ pipeline {
 		 ], 
 
 		 credentialsId: 'nexus3', 
-		 groupId: 'com.mcnz.rps', 
+		 groupId: 'com.mcnz.rps.spring', 
 		 nexusUrl: '13.126.21.144:8081', 
 		 nexusVersion: 'nexus3', 
 		 protocol: 'http', 
-		 repository: 'http://13.126.21.144:8081/repository/maven-snapshots/', 
+		 repository: 'http://13.126.21.144:8081/repository/maven-sanpshots/', 
 		 version: '1.0-SNAPSHOT'
 
             }
