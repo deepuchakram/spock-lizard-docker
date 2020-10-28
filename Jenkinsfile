@@ -91,8 +91,8 @@ pipeline {
 		      [
 		           artifactId: 'roshambo', 
 			   classifier: '', 
-			   file: 'target/rps.war', 
-			   type: 'war'
+			   file: 'target/*.jar', 
+			   type: 'jar'
 		      ]
 		 ], 
 
@@ -110,7 +110,7 @@ pipeline {
 	      
 	stage('Archive artifacts') {
 		steps{
-      			archive 'target/*.war'
+      			archive 'target/*.jar'
   			 }
 	}
     
@@ -128,7 +128,7 @@ pipeline {
 	  }  
 	stage("push docker image to nexus")  {
 		    steps{
-		    shell "docker tag rock:v0.${BUILD_NUMBER} 13.126.21.144:8083/myapp:v0.${BUILD_NUMBER}"
+		    shell "docker tag spock-lizard:v0.${BUILD_NUMBER} 13.126.21.144:8083/spock-lizard:v0.${BUILD_NUMBER}"
 	    withDockerRegistry(credentialsId: 'private-docker', url: 'http://13.126.21.144:8083') {
              shell "docker push 13.126.21.144:8083/rock:v0.${BUILD_NUMBER}"
             }
