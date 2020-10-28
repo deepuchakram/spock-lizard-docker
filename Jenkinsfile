@@ -85,7 +85,7 @@ pipeline {
     }
 	}     
 
-	 stage('Publish Artifacts to Nexus') {
+	/* stage('Publish Artifacts to Nexus') {
             steps {
                  nexusArtifactUploader artifacts: [
 		      [
@@ -106,7 +106,7 @@ pipeline {
 
             }
 
-	 }
+	 }*/
 	      
 	stage('Archive artifacts') {
 		steps{
