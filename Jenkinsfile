@@ -1,7 +1,7 @@
 pipeline {
 	
 	environment {
-    registry = "admin/rock"
+    registry = "admin/spock-lizard-docker"
     registryCredential = 'private-docker'
     dockerImage = ''
   }
@@ -14,7 +14,7 @@ pipeline {
 	     
 	 stage('Code Checkout') {
             steps {
-                      git credentialsId: 'Github-deepuchakram', url: 'https://github.com/deepuchakram/rock.git'
+                      git credentialsId: 'Github-deepuchakram', url: 'https://github.com/deepuchakram/spock-lizard-docker.git'
 	    }
 	}
 	      
@@ -123,7 +123,7 @@ pipeline {
 	      
 	stage("Build Docker image")  {
             steps { 
-            shell "docker build -t rock:v0.${BUILD_NUMBER} ."
+            shell "docker build -t spock-lizard-docker:v0.${BUILD_NUMBER} ."
                        }
 	  }  
 	stage("push docker image to nexus")  {
