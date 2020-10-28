@@ -1,0 +1,6 @@
+/etc/docker/spock-lizard-docker/src/main/java/com/mcnz/rps/spring/RoshamboWebApplication.java
+/etc/docker/spock-lizard-docker/src/main/java/com/mcnz/rps/spring/Gesture.java
+/etc/docker/spock-lizard-docker/src/main/java/com/mcnz/rps/spring/ScoreRepository.java
+/etc/docker/spock-lizard-docker/src/main/java/com/mcnz/rps/spring/ScoreService.java
+/etc/docker/spock-lizard-docker/src/main/java/com/mcnz/rps/spring/WebController.java
+/etc/docker/spock-lizard-docker/src/main/java/com/mcnz/rps/spring/Score.java
